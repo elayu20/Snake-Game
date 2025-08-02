@@ -1,0 +1,57 @@
+ @import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    width: 800px;
+    height: 800px;
+    border: 2px solid black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+}
+
+#screenTooSmall {
+    display: none;
+}
+
+/* For small screens */
+@media (max-width: 900px), (max-height: 900px) {
+    #container {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 500px), (max-height: 500px) {
+    #container, .box {
+        display: none;
+    }
+    #screenTooSmall {
+        display: flex;
+        size: 100%;
+    }
+}
+
+#game-over-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Minecraft', sans-serif;
+}
+
+#game-over-description {
+    text-align: center;
+    position: absolute;
+    top: 55%;
+    left: 51%;
+    transform: translate(-55%, -51%);
+    font-family: 'Minecraft', sans-serif;
+}
